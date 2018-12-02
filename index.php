@@ -43,7 +43,7 @@ if (!$hmac){
             CURLOPT_USERPWD => $cred->username .':'.$cred->password,
             CURLOPT_HTTPHEADER => array("Accept: application/json")
         );
-        $ch      = curl_init( 'http://'.$shopname.'.api..aurora.rosti/orders' );
+        $ch      = curl_init( 'http://'.$shopname.'.api.aurora.rosti/orders' );
         curl_setopt_array( $ch, $options );
         $content = curl_exec( $ch );
         $err     = curl_errno( $ch );

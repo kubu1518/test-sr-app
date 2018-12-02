@@ -39,7 +39,7 @@ $options = array(
     CURLOPT_POSTFIELDS => "client_id=".$clientId."&client_secret=".$clientSecret."&code=".$code."&timestamp=".$timestamp."&hmac=".$hmac
 );
 // Send requeest for API credentials
-$ch      = curl_init( 'https://'.$shopname.'.shoprenter.hu/admin/oauth/access_credential' );
+$ch      = curl_init( 'https://'.$shopname.'.aurora.rosti/admin/oauth/access_credential' );
 curl_setopt_array( $ch, $options );
 $content = curl_exec( $ch );
 $err     = curl_errno( $ch );
@@ -49,4 +49,4 @@ curl_close( $ch );
 // Store credentials for this shop
 file_put_contents($shopname.'auth.txt',$content);
 // redirect to the app's interface
-header("Location: https://".$shopname.".shoprenter.hu/admin/app/".$appId );
+header("Location: https://".$shopname.".aurora.rosti/admin/app/".$appId );
