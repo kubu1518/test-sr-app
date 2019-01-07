@@ -19,7 +19,7 @@ $timestamp = $_GET['timestamp'];
 $hmac = $_GET['hmac'];
 $clientId = 'gntbqDgUJXUmG9M5nDukSXQS';
 $clientSecret = 'c6Ze5WN3zHZ4NFMW7T3qeqKA';
-$appId = 5;
+$appId = 7;
 /**
  * TODO validate the request sent by ShopRenter
  */
